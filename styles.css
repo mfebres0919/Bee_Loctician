@@ -735,8 +735,8 @@ h1, h2, h3, h4, h5, h6 {
     flex-direction: column;
     margin-top: 4rem;
     padding: 2rem;
-    text-align: center;
     height: 100vh;
+    text-align: center;
 }
 
 .cta-1-content h1 {
