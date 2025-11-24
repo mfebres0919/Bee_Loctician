@@ -729,7 +729,8 @@ h1, h2, h3, h4, h5, h6 {
 /* ========CALL TO ACTION 1=========*/
 .cta-1-section {
     background-image: url(./images/cta1-bg.svg);
-    background-size: auto;
+    background-size: cover;
+    background-repeat: no-repeat;
     display: flex;
     flex-direction: column;
     margin-top: 4rem;
