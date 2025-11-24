@@ -694,14 +694,13 @@ h1, h2, h3, h4, h5, h6 {
 /* ========HERO SECTION=========*/
 .hero-section {
     justify-content: center;
-    height: 100vh;
     display: flex;
     flex-direction: column;
     text-align: center;
 }
 
 .hero-content h1 {
-    padding-top: 10rem;
+    padding-top: 8rem;
 }
 
 .hero-section h2, p {
@@ -729,14 +728,14 @@ h1, h2, h3, h4, h5, h6 {
 
 /* ========CALL TO ACTION 1=========*/
 .cta-1-section {
-    background-image: url(./images/cta1-bg\ \(1\).svg);
-    background-size: cover;
+    background-image: url(./images/cta1-bg.svg);
+    background-size: auto;
     display: flex;
     flex-direction: column;
     margin-top: 4rem;
     padding: 2rem;
     text-align: center;
-    height: 100vh;
+    height: 140vh;
 }
 
 .cta-1-content h1 {
