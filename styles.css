@@ -725,7 +725,7 @@ h1, h2, h3, h4, h5, h6 {
 
 
 
-
+/*---------CALL TO ACTION 1 ------ */
 
 .cta-1-section {
     background-image: url(./images/cta1-bg.svg);
@@ -775,6 +775,20 @@ h1, h2, h3, h4, h5, h6 {
     display: flex;
     flex-direction: column;
     text-align: center;
+    animation: glow 2s infinite ease-in-out;
+
+}
+
+@keyframes glow {
+  0% {
+    box-shadow: 0 0 0px #d64532;
+  }
+  50% {
+    box-shadow: 0 0 12px #d64532;
+  }
+  100% {
+    box-shadow: 0 0 0px #d64532;
+  }
 }
 
 .policy-icon {
