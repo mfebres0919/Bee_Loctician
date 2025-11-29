@@ -1,17 +1,19 @@
 body {
   margin: 0;
   padding: 0;
-  background: rgb(255, 250, 243);
+  background: rgb(0, 0, 0);
 }
 
 p {
   line-height: 2rem;
   margin: 0;
+  color: white;
 }
 
 h1, h2, h3, h4, h5, h6 {
   line-height: 2rem;
   margin: 0;
+  color: white;
 }
 
 .font-1 {
@@ -734,97 +736,6 @@ h1, h2, h3, h4, h5, h6 {
     padding: 1.5rem;
 }
 
-.btn-1 {
-    background: linear-gradient(to right, #6b1a1a, #d64532);
-    padding: 15px 20px;
-    border-radius: 5px;
-    color: #fff;
-    font-size: 20px;
-    font-family: "Times New Roman", serif; /* or whatever font you're using */
-    border: 2px solid #000;
-    display: inline-block;
-    text-decoration: none;
-}
-
-
-
-/*---------CALL TO ACTION 1 ------ */
-
-.cta-1-section {
-    background-image: url(./images/cta1-bg.svg);
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: top center;
-
-    display: flex;
-    flex-direction: column;
-    margin-top: 4rem;
-    padding: 2rem;
-
-    height: auto;
-    padding-bottom: 4rem;
-
-    text-align: center;
-}
-
-
-.cta-1-content h1 {
-    padding-top: 2rem;
-}
-
-.cta-1-content h2 {
-    padding-bottom: 2rem;
-}
-
-
-
-
-/* ========BOOKING POLICY=========*/
-.booking-container {
-    display: flex;
-    flex-direction: column;
-    padding: 2rem;
-}
-
-.booking-policy-header {
-    text-align: center;
-}
-
-.policy-card {
-    border: 2px solid black;
-    margin-bottom: 2rem;
-    border-radius: 10px;
-    padding: 2rem;
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    animation: glow 2s infinite ease-in-out;
-
-}
-
-@keyframes glow {
-  0% {
-    box-shadow: 0 0 0px #d64532;
-  }
-  50% {
-    box-shadow: 0 0 12px #d64532;
-  }
-  100% {
-    box-shadow: 0 0 0px #d64532;
-  }
-}
-
-.policy-icon {
-    padding-bottom: 2rem;
-}
-
-
-.policy-heading {
-    padding-bottom: 1rem;
-}
-
-
-
 /* =====================================
 ===============CAROUSEL #1============= */
 
@@ -837,7 +748,7 @@ h1, h2, h3, h4, h5, h6 {
 .carousel-track {
   display: inline-block; /* Allows items to sit side-by-side */
   animation: slide 15s linear infinite; /* Adjust duration and timing */
-  background-color: black;
+  background-color: #ffc2f7;
   padding: 1.5rem;
 
 }
@@ -846,7 +757,7 @@ h1, h2, h3, h4, h5, h6 {
   display: inline-block; /* Aligns text items horizontally */
   padding: 0 20px; /* Spacing between text items */
   font-size: 1.2em;
-  color: white;
+  color: black;
 }
 
 .carousel-item p {
@@ -865,66 +776,20 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 
+/* ABOUT ME SECTION */
 
-
-/* ========MY WORK=========*/
-.my-work-content {
+.about-me {
     display: flex;
     flex-direction: column;
     padding: 2rem;
     text-align: center;
 }
 
-.my-work-gallery {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.torn-edge {
-    margin-bottom: 2rem;
-    display: flex;
+.about-paragraph {
+    padding: 0;
 }
 
 
-
-/* ========SELFIES SECTION=========*/
-.selfies-section {
-    display: flex;
-    flex-direction: column;
-    padding: 2rem;
-    text-align: center;
-    border: 2px solid black;
-    border-radius: 10px;
-    margin: 1.5rem;
-}
-
-.selfies-img, .selfies-content1 {
-    padding-bottom: 2rem;
-}
-
-
-/* ========CALL TO ACTION 2=========*/
-.cta-2-content {
-    display: flex;
-    flex-direction: column;
-    padding: 2rem;
-    text-align: center;
-}
-
-
-.btn-2 {
-    background: linear-gradient(to right, #3b3b3b, #ffffff);
-    padding: 15px 20px;
-    border-radius: 10px;
-    color: #000000;
-    font-size: 20px;
-    font-family: "Times New Roman", serif; /* or whatever font you're using */
-    border: 3px solid #000;
-    display: inline-block;
-    text-decoration: none;
-}
-
-.logo-img {
-    padding-top: 2rem;
+.about-logo {
+    padding: 2rem 0rem 2rem 0rem;
 }
