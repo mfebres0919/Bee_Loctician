@@ -721,7 +721,7 @@ h1, h2, h3, h4, h5, h6 {
     display: flex;
     flex-direction: column;
     text-align: center;
-    padding-top: 8rem;
+    padding-top: 9rem;
 }
 
 
@@ -793,4 +793,88 @@ h1, h2, h3, h4, h5, h6 {
 
 .about-logo {
     padding: 2rem 0rem 2rem 0rem;
+}
+
+
+
+/* ====BUSINESS SECTION===== */
+
+.hours-section {
+    background-image: url(./images/backgrounds/container2-background.svg);
+    background-size: cover;
+    text-align: center;
+}
+
+.hours-container {
+    max-width: 600px;
+    margin: auto;
+    margin: 2rem;
+    position: relative;
+}
+
+.container-2 {
+    margin-top: 3rem;
+}
+
+.hours-title-img {
+    display: block;
+    margin: 0 auto;
+    position: relative;
+    padding: 2rem 4rem;
+    z-index: 10;
+    margin-bottom: -1.2rem; /* overlap into the box */
+}
+
+
+
+.hours-title span {
+    font-family: "Great Vibes", cursive; /* script font */
+    font-size: 3.2rem;
+    color: #ff4ec9; neon pink
+    display: block;
+    margin-top: -15px;
+}
+
+.hours-box {
+    background: rgba(0,0,0,0.6);
+    padding: 3rem 2rem;
+    /* margin-top: 2rem; */
+
+    /* ONLY LEFT & RIGHT & BOTTOM BORDER */
+    border-left: 3px solid #ff45c7;
+    border-right: 3px solid #ff45c7;
+    border-bottom: 3px solid #ff45c7;
+    border-top: 3px solid #ff45c7;
+
+
+    /* glow */
+    box-shadow: 0 0 15px #ff45c7;
+
+    border-radius: 0 0 10px 10px; /* rounded bottom only */
+}
+
+.contact-box {
+   display: flex;
+   margin: 0;
+   flex-direction: column;
+   text-align: left;
+   padding-left: 2.6rem;
+}
+
+.contact-icons {
+    padding-right: 1rem;
+    margin: 0;
+}
+
+.days {
+    display: flex;
+    align-items: center;  /* vertically centers icon + text */
+    gap: 0.5rem;          /* space between icon and phone number */
+}
+
+
+.address {
+    color: white;
+    font-weight: 600;
+    font-size: 1.2rem;
 }
