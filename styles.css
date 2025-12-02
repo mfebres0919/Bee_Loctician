@@ -858,7 +858,7 @@ h1, h2, h3, h4, h5, h6 {
    margin: 0;
    flex-direction: column;
    text-align: left;
-   padding-left: 2.6rem;
+   padding-left: 8rem;
 }
 
 .contact-icons {
@@ -877,4 +877,55 @@ h1, h2, h3, h4, h5, h6 {
     color: white;
     font-weight: 600;
     font-size: 1.2rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.prep-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* mobile: one column */
+    gap: 1.2rem;
+    margin: 1rem;
+    padding: 1rem;
+}
+
+.prep-card {
+    padding: 1.4rem;
+    font-size: 1.2rem;
+    font-weight: 500;
+    text-align: center;
+    border-radius: 2px;
+}
+
+/* Colors */
+.pink {
+    background: #e2349b;
+    color: white;
+}
+
+.black {
+    background: #000;
+    color: white;
+    border: 1px solid white;
+}
+
+/* Desktop layout */
+@media (min-width: 768px) {
+    .prep-grid {
+        grid-template-columns: 1fr 1fr; /* 2 columns */
+    }
 }
