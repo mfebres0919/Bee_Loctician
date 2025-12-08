@@ -7,6 +7,7 @@ body {
 p {
   line-height: 2rem;
   margin: 0;
+  font-family: poppins, sans-serif;
   color: white;
 }
 
@@ -797,7 +798,7 @@ h1, h2, h3, h4, h5, h6 {
 
 
 
-/* ====BUSINESS SECTION===== */
+/* ====BUSINESS HOURS===== */
 
 .hours-section {
     background-image: url(./images/backgrounds/container2-background.svg);
@@ -814,6 +815,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .container-2 {
     margin-top: 3rem;
+    padding-bottom: 4rem;
 }
 
 .hours-title-img {
@@ -835,7 +837,7 @@ h1, h2, h3, h4, h5, h6 {
     margin-top: -15px;
 }
 
-.hours-box {
+.hours-box, .card-1 {
     background: rgba(0,0,0,0.6);
     padding: 3rem 2rem;
     /* margin-top: 2rem; */
@@ -853,12 +855,16 @@ h1, h2, h3, h4, h5, h6 {
     border-radius: 0 0 10px 10px; /* rounded bottom only */
 }
 
+
+
+
+/* -----CONTACT SECTION-------- */
 .contact-box {
    display: flex;
    margin: 0;
    flex-direction: column;
    text-align: left;
-   padding-left: 8rem;
+   padding-left: 5rem;
 }
 
 .contact-icons {
@@ -893,7 +899,20 @@ h1, h2, h3, h4, h5, h6 {
 
 
 
+/* =====IMPORTANT MESSAGES SECTION======= */
 
+.messages-section {
+    background-image: url(./images/backgrounds/announcement-bg\ .png);
+    background-size: cover;
+
+}
+
+.messages-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 2rem;
+}
 
 .prep-grid {
     display: grid;
@@ -901,6 +920,7 @@ h1, h2, h3, h4, h5, h6 {
     gap: 1.2rem;
     margin: 1rem;
     padding: 1rem;
+    padding-bottom: 4rem;
 }
 
 .prep-card {
@@ -928,4 +948,75 @@ h1, h2, h3, h4, h5, h6 {
     .prep-grid {
         grid-template-columns: 1fr 1fr; /* 2 columns */
     }
+}
+
+
+
+
+/* -------BOOKING CONTENT -------- */
+
+.booking-section {
+    background-image: url(./images/backgrounds/info-bg.png);
+    background-size: cover;
+    text-align: center;
+}
+
+
+
+.booking-content {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  /* border: 2px solid red; */
+}
+
+.booking-logo {
+  align-self: center;
+  padding-bottom: 4rem;
+}
+
+.booking-btn {
+  display: inline-block;
+  padding: 1rem 2rem;
+  background-color: #ff45c7;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  margin-top: 2rem;
+}
+
+
+.card-1 {
+  margin-bottom: 4rem;
+}
+
+.card-1 h1 {
+  padding: 2rem 0rem 2rem 0rem;
+}
+
+
+.appointment-card {
+  margin-bottom: 0;
+}
+
+
+
+
+
+/* ==========CTA 2 SECTION====== */
+
+.cta-2-content {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    text-align: center;
+}
+
+.cta-2-paragraph h2 {
+  padding: 2rem 0rem 2rem 0rem;
+}
+
+.cta-2-paragraph p {
+  padding-bottom: 0rem;
 }
