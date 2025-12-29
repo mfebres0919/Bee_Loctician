@@ -1585,9 +1585,40 @@ h1, h2, h3, h4, h5, h6 {
   padding: 2rem 0rem 2rem 0rem;
 }
 
+.cta-2-paragraph {
+  display: flex;
+  flex-direction: column;
+  /* border: 2px solid red; */
+}
+
 .cta-2-paragraph p {
   padding-bottom: 0rem;
 }
+
+.cta-img img {
+  width: clamp(300px, 20vw, 200px);
+  height: auto;
+}
+
+.tag-us-img {
+  width: clamp(20rem, 15vw, 40rem);
+  height: auto;
+  margin: 0 auto;
+}
+
+
+
+
+@media (min-width: 1024px) {
+  .cta-2-content   {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 8rem;
+  }
+}
+
+
 
 /* ====================
 ========STAR FIELD===== */
