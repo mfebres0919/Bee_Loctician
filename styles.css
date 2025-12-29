@@ -1776,3 +1776,13 @@ h1, h2, h3, h4, h5, h6 {
     opacity: 0.7;
     animation-duration: 10s;
 }
+
+
+
+/* LOGO SIZING */
+
+.booking-logo img {
+  width: clamp(300px, 20vw, 500px);
+  height: auto;
+  margin: 0 auto;
+}
