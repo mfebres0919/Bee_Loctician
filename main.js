@@ -75,3 +75,47 @@ items.forEach(item => {
     }
   });
 });
+
+
+
+
+window.addEventListener('load', () => {
+  document.querySelectorAll('.hero-section .reveal').forEach(el => {
+    el.classList.add('active');
+  });
+});
+
+const observer = new IntersectionObserver(
+  entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.querySelectorAll('.reveal').forEach(el => {
+          el.classList.add('active');
+        });
+        observer.unobserve(entry.target);
+      }
+    });
+  },
+  { threshold: 0.2 }
+);
+
+document.querySelectorAll('.about-me-section').forEach(section => {
+  observer.observe(section);
+});
+
+document.querySelectorAll('.services-accordion').forEach(section => {
+  observer.observe(section);
+});
+
+document.querySelectorAll('.booking-section').forEach(section => {
+  observer.observe(section);
+});
+document.querySelectorAll('.hours-section').forEach(section => {
+  observer.observe(section);
+});
+document.querySelectorAll('.messages-section').forEach(section => {
+  observer.observe(section);
+});
+document.querySelectorAll('.cta-2-section').forEach(section => {
+  observer.observe(section);
+});

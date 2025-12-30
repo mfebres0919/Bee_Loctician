@@ -1974,3 +1974,243 @@ animation-duration: 7s;
 }
 
 
+
+
+
+/* ===========================
+=========TRANSITIONS========== */
+
+/* BASE REVEAL STATE */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition:
+    opacity 1.4s ease,
+    transform 1.4s ease;
+}
+
+/* ACTIVE STATE */
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+/* Text first */
+.reveal-text.active {
+  transition-delay: 0.2s;
+}
+
+/* Logo second */
+.reveal-logo.active {
+  transition-delay: 0.6s;
+}
+
+/* Button third */
+.reveal-btn.active {
+  transition-delay: 1s;
+}
+.reveal-img {
+  transform: translateY(60px) scale(0.96);
+}
+
+.reveal-img.active {
+  transform: translateY(0) scale(1);
+}
+
+
+
+.about-me-section .reveal-img.active {
+  transition-delay: 0.2s;
+}
+
+.about-me-section .reveal-logo.active {
+  transition-delay: 0.6s;
+}
+
+.about-me-section .reveal-text.active {
+  transition-delay: 1s;
+}
+
+.about-me-section .reveal-btn.active {
+  transition-delay: 1.4s;
+}
+
+.about-me-section .reveal-img {
+  transform: translateY(60px) scale(0.96);
+}
+
+.about-me-section .reveal-img.active {
+  transform: translateY(0) scale(1);
+}
+
+
+
+
+/* Logo first */
+.services-accordion .reveal-logo.active {
+  transition-delay: 0.2s;
+}
+
+/* Container second */
+.services-accordion .reveal-container.active {
+  transition-delay: 0.6s;
+}
+
+/* Service rows (stagger down the list) */
+.services-accordion .reveal-item:nth-child(1).active {
+  transition-delay: 1s;
+}
+
+.services-accordion .reveal-item:nth-child(2).active {
+  transition-delay: 1.2s;
+}
+
+.services-accordion .reveal-item:nth-child(3).active {
+  transition-delay: 1.4s;
+}
+
+.services-accordion .reveal-item:nth-child(4).active {
+  transition-delay: 1.6s;
+}
+
+.services-accordion .reveal-item {
+  transform: translateY(30px);
+}
+
+.services-accordion .reveal-item.active {
+  transform: translateY(0);
+}
+
+.services-accordion .accordion-content {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 1.6s ease, transform 1.6s ease;
+}
+
+.services-accordion .accordion-content.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+
+
+/* Logo first */
+.booking-section .reveal-logo.active {
+  transition-delay: 0.2s;
+}
+
+/* Cards container second */
+.booking-section .reveal-container.active {
+  transition-delay: 0.6s;
+}
+
+/* Individual cards */
+.booking-section .reveal-card:nth-child(1).active {
+  transition-delay: 1s;
+}
+
+.booking-section .reveal-card:nth-child(2).active {
+  transition-delay: 1.2s;
+}
+
+.booking-section .reveal-card:nth-child(3).active {
+  transition-delay: 1.4s;
+}
+
+.booking-section .reveal-card:nth-child(4).active {
+  transition-delay: 1.8s;
+}
+.booking-section .reveal-card {
+  transform: translateY(5px) scale(0.97);
+}
+
+.booking-section .reveal-card.active {
+  transform: translateY(0) scale(1);
+}
+
+
+/* Left container first */
+.hours-section .reveal-left.active {
+  transition-delay: 0.2s;
+}
+
+/* Right container second */
+.hours-section .reveal-right.active {
+  transition-delay: 0.6s;
+}
+
+/* Boxes inside containers */
+.hours-section .reveal-box.active {
+  transition-delay: 1s;
+}
+
+.hours-section .reveal-left {
+  transform: translateY(-30px);
+}
+
+.hours-section .reveal-right {
+  transform: translateY(-30px);
+}
+
+
+/* Logo first */
+.messages-section .reveal-logo.active {
+  transition-delay: 0.2s;
+}
+
+/* Grid container second */
+.messages-section .reveal-container.active {
+  transition-delay: 0.6s;
+}
+
+/* Prep cards stagger */
+.messages-section .reveal-card:nth-child(1).active { transition-delay: 1s; }
+.messages-section .reveal-card:nth-child(2).active { transition-delay: 1.15s; }
+.messages-section .reveal-card:nth-child(3).active { transition-delay: 1.3s; }
+.messages-section .reveal-card:nth-child(4).active { transition-delay: 1.45s; }
+.messages-section .reveal-card:nth-child(5).active { transition-delay: 1.6s; }
+.messages-section .reveal-card:nth-child(6).active { transition-delay: 1.75s; }
+
+.messages-section .reveal-card {
+  transform: translateY(25px);
+}
+
+.messages-section .reveal-card.active {
+  transform: translateY(0);
+}
+
+
+
+/* Image first */
+.cta-2-section .reveal-img.active {
+  transition-delay: 0.2s;
+}
+
+/* Headline */
+.cta-2-section .reveal-text:nth-of-type(1).active {
+  transition-delay: 0.6s;
+}
+
+/* Tag image */
+.cta-2-section .reveal-logo.active {
+  transition-delay: 1s;
+}
+
+/* Handle text */
+.cta-2-section p.reveal-text.active {
+  transition-delay: 1.3s;
+}
+
+/* Button last */
+.cta-2-section .reveal-btn.active {
+  transition-delay: 1.6s;
+}
+.cta-2-section .reveal-img {
+  transform: translateY(50px) scale(0.96);
+}
+
+.cta-2-section .reveal-img.active {
+  transform: translateY(0) scale(1);
+}
