@@ -1294,7 +1294,7 @@ h1, h2, h3, h4, h5, h6 {
     position: relative;
     width: clamp(300px, 20vw, 400px);
     height: auto;
-    padding: 2rem 4rem;
+    padding: 2rem 2rem;
     z-index: 10;
     margin-bottom: -1.2rem; /* overlap into the box */
 }
@@ -1311,8 +1311,9 @@ h1, h2, h3, h4, h5, h6 {
 .card-1 {
     background: rgba(0,0,0,0.6);
     padding: 1.2rem;
-    margin: 2rem auto;
+    margin: 2rem 2rem auto;
     max-width: 400px;
+
 
     border: 3px solid #ff45c7;
     border-radius: 0 0 10px 10px;
@@ -1474,7 +1475,7 @@ animation-duration: 7s;
     flex-direction: column;
 
     /* centers the whole box */
-    margin: 2rem auto;
+    margin: 2rem 2rem auto;
 
     /* left-align text */
     text-align: left;
@@ -1654,7 +1655,7 @@ animation-duration: 7s;
 .booking-content {
   display: flex;
   flex-direction: column;
-  padding: 2rem;
+  /* padding: 2rem; */
   /* border: 2px solid red; */
 }
 
