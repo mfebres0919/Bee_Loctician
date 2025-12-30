@@ -1145,7 +1145,8 @@ h1, h2, h3, h4, h5, h6 {
 
 /* WRAPPER */
 .services-accordion {
-  margin: 4rem 2rem auto;
+  margin: 4rem auto;
+  padding: 2rem;
   display: flex;
   flex-direction: column;
   gap: 0;
@@ -1236,9 +1237,8 @@ h1, h2, h3, h4, h5, h6 {
   display: inline-block;
   margin-top: 1.2rem;
 
-  background: transparent;
-  color: var(--neon-pink);
-
+  background: white;
+  color: rgb(79, 22, 70);
   padding: 0.45rem 1.6rem;
   border-radius: 999px;
   border: 1px solid var(--neon-pink);
@@ -1255,8 +1255,8 @@ h1, h2, h3, h4, h5, h6 {
 .select-btn:hover {
   transform: translateY(-2px);
   box-shadow:
-    0 0 18px rgba(255, 69, 199, 0.8),
-    0 0 30px rgba(255, 69, 199, 0.6);
+    0 0 18px rgba(79, 0, 55, 0.8),
+    0 0 30px rgba(151, 4, 107, 0.6);
 }
 
 /* DESCRIPTION TEXT */
@@ -1883,6 +1883,9 @@ animation-duration: 7s;
 .star-cta2:nth-child(20) { top: 68%; left: 85%; animation-delay: 2.0s; }
 
 
+
+/* CTA-2 BUBBLES */
+
 .bubble-bg-cta2 {
     position: absolute;
     inset: 0;
@@ -1902,24 +1905,10 @@ animation-duration: 7s;
     border: 1px solid rgba(255,255,255,0.35);
     box-shadow:
         0 0 40px rgba(255, 120, 219, 0.25),
-        inset 0 0 40px rgba(255, 120, 246, 0.493);
+        inset 0 0 40px rgba(255, 120, 246, 0.163);
     animation: floatBubbleCTA2 6s ease-in-out infinite;
 }
 
-.bubble-bg-cta2::after {
-    content: "";
-    position: absolute;
-    bottom: 25%;
-    right: 15%;
-    width: 180px;
-    height: 180px;
-    border-radius: 50%;
-    border: 1px solid rgba(255,255,255,0.25);
-    box-shadow:
-        0 0 25px rgba(120,180,255,0.2),
-        inset 0 0 25px rgba(120,180,255,0.3);
-    animation: floatBubbleCTA2 8s ease-in-out infinite reverse;
-}
 
 .bubble-bg-cta2::after {
     content: "";
@@ -1960,7 +1949,7 @@ animation-duration: 7s;
     border: 1px solid rgba(255,255,255,0.3);
 
     box-shadow:
-        0 0 30px rgba(234, 48, 194, 0.436),
+        0 0 30px rgba(234, 48, 194, 0.298),
         inset 0 0 30px rgba(255, 120, 217, 0.3);
 
     animation: floatBubbleCTA2 7s ease-in-out infinite;
@@ -1983,3 +1972,72 @@ animation-duration: 7s;
     opacity: 0.7;
     animation-duration: 10s;
 }
+
+
+
+
+/* SHOOTING STAR ANIMATION */
+.shooting-star {
+    position: absolute;
+    left: -25%;
+    width: 180px;
+    height: 3px;
+
+    background: linear-gradient(
+        90deg,
+        rgba(255,255,255,0),
+        rgba(255,170,249,0.8),
+        rgba(255,255,255,1)
+    );
+
+    box-shadow:
+        0 0 12px rgba(255,170,249,0.9),
+        0 0 24px rgba(255,170,249,0.7),
+        0 0 40px rgba(255,170,249,0.6);
+
+    transform: rotate(25deg);
+    opacity: 0;
+
+    pointer-events: none;
+}
+
+.shooting-star-1 {
+  top: 20%;
+  --angle: 25deg;
+  animation: shootOnce 12s linear infinite;
+}
+
+.shooting-star-2 {
+  top: 55%;
+  --angle: 20deg;
+  animation: shootOnce 22s linear infinite;
+  animation-delay: 8s;
+}
+
+
+@keyframes shootOnce {
+  0% {
+    opacity: 0;
+    transform: translateX(0) translateY(0) rotate(var(--angle));
+  }
+
+  0.5% {
+    opacity: 1;
+  }
+
+  .85% {
+    opacity: 1;
+    transform: translateX(160vw) translateY(60vh) rotate(var(--angle));
+  }
+
+  2.5% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateX(160vw) translateY(60vh) rotate(var(--angle));
+  }
+}
+
+
