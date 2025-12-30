@@ -698,7 +698,6 @@ img {
   border-radius: 3rem;
   background: white;
   font-family: "Anton", sans-serif;
-  /* font-weight: bold; */
   text-decoration: none;
   font-size: 1.2rem;
   color: rgb(79, 22, 70);
@@ -706,11 +705,14 @@ img {
   margin: 2rem auto 0;
   max-width: 6.5rem;
 
-    /* GLOW */
+  /* glow */
   box-shadow:
     0 0 20px rgba(255, 120, 200, 0.35),
     0 0 40px rgba(255, 90, 180, 0.25),
     0 0 80px rgba(255, 60, 160, 0.15);
+
+  /* bounce */
+  animation: softBounce 5s ease-in-out infinite;
 
   transition:
     transform 0.25s ease,
@@ -718,13 +720,44 @@ img {
 }
 
 .btn-1:hover {
+  animation-play-state: paused;
   transform: translateY(-2px);
-
+  
   box-shadow:
     0 0 25px rgba(255, 120, 200, 0.55),
     0 0 60px rgba(255, 90, 180, 0.4),
     0 0 120px rgba(255, 60, 160, 0.25);
 }
+
+@keyframes softBounce {
+  0% {
+    transform: translateY(0);
+  }
+
+  5% {
+    transform: translateY(-6px);
+  }
+
+  10% {
+    transform: translateY(0);
+  }
+
+  15% {
+    transform: translateY(-4px);
+  }
+
+  20% {
+    transform: translateY(0);
+  }
+
+  /* pause */
+  100% {
+    transform: translateY(0);
+  }
+}
+
+
+
 
 
 @media (min-width: 1024px) {
@@ -2207,6 +2240,8 @@ animation-duration: 7s;
 .cta-2-section .reveal-btn.active {
   transition-delay: 1.6s;
 }
+
+
 .cta-2-section .reveal-img {
   transform: translateY(50px) scale(0.96);
 }
