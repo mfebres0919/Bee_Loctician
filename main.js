@@ -45,4 +45,33 @@
         }
         item.addEventListener('click', onClick)
         }
-                                
+
+        
+
+
+// Service Accordion Script
+const items = document.querySelectorAll('.service-item');
+
+items.forEach(item => {
+  const header = item.querySelector('.service-header');
+  const content = item.querySelector('.service-content');
+
+  header.addEventListener('click', () => {
+    // Close others
+    items.forEach(i => {
+      if (i !== item) {
+        i.classList.remove('active');
+        i.querySelector('.service-content').style.height = '0px';
+      }
+    });
+
+    // Toggle current
+    if (item.classList.contains('active')) {
+      content.style.height = '0px';
+      item.classList.remove('active');
+    } else {
+      item.classList.add('active');
+      content.style.height = content.scrollHeight + 'px';
+    }
+  });
+});
