@@ -2,6 +2,7 @@ body, html {
   margin: 0;
   padding: 0;
   background: rgb(0, 0, 0);
+  scroll-behavior: smooth;
 }
 
 p,a {
@@ -1145,7 +1146,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* WRAPPER */
 .services-accordion {
-  margin: 4rem auto;
+  margin: 0rem auto;
   padding: 2rem;
   display: flex;
   flex-direction: column;
