@@ -1653,6 +1653,7 @@ animation-duration: 7s;
 
 
 .booking-content {
+  padding-top: 4rem;
   display: flex;
   flex-direction: column;
   /* padding: 2rem; */
@@ -1699,6 +1700,7 @@ animation-duration: 7s;
   .booking-cards {
     display: flex;
     flex-direction: row;
+    justify-content: center;
     gap: 3rem;
     flex-wrap: wrap;
   }
