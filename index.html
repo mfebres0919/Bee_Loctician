@@ -426,7 +426,7 @@
                         <p>$180</p>
                         <p class="pink-message">Please come with hair washed and blow-dried</p>
                     </div>
-                    <a href="#" class="book-btn">BOOK</a>
+                    <button class="book-btn" onclick="openBooking()">BOOK</button>
                 </div>
 
                 <!-- SUBSERVICE #2 -->
@@ -437,7 +437,7 @@
                         <p>$195</p>
                         <p class="pink-message">Please come with hair washed and blow-dried</p>
                     </div>
-                    <a href="#" class="book-btn">BOOK</a>
+                    <button class="book-btn" onclick="openBooking()">BOOK</button>
                 </div>
             </div>
         </div>
@@ -460,7 +460,7 @@
                         <p>2 hours</p>
                         <p>$95</p>
                     </div>
-                    <a href="#" class="book-btn">BOOK</a>
+                    <button class="book-btn" onclick="openBooking()">BOOK</button>
                 </div>
                 <!-- SUBSERVICE #2 -->
                 <div class="sub-service">
@@ -469,7 +469,7 @@
                         <p>2 hours</p>
                         <p>$110</p>
                     </div>
-                    <a href="#" class="book-btn">BOOK</a>
+                    <button class="book-btn" onclick="openBooking()">BOOK</button>
                 </div>
                 <!-- SUBSERVICE #3 -->
                 <div class="sub-service">
@@ -478,7 +478,7 @@
                         <p>2 hours</p>
                         <p>$125</p>
                     </div>
-                    <a href="#" class="book-btn">BOOK</a>
+                    <button class="book-btn" onclick="openBooking()">BOOK</button>
                 </div> 
                 <!-- SUBSERVICE #4 -->
                 <div class="sub-service">
@@ -487,7 +487,7 @@
                         <p>2 hours</p>
                         <p>$145</p>
                     </div>
-                    <a href="#" class="book-btn">BOOK</a>
+                    <button class="book-btn" onclick="openBooking()">BOOK</button>
                 </div>  
                 <!-- SUBSERVICE #5 -->
                 <div class="sub-service">
@@ -496,7 +496,7 @@
                         <p>2 hours</p>
                         <p>$160</p>
                     </div>
-                    <a href="#" class="book-btn">BOOK</a>
+                    <button class="book-btn" onclick="openBooking()">BOOK</button>
                 </div>                 
             </div>
         </div>        
@@ -518,7 +518,7 @@
                         <p>5 hours + 40 minutes</p>
                         <p>$850.00</p>
                     </div>
-                    <a href="#" class="book-btn">BOOK</a>
+                    <button class="book-btn" onclick="openBooking()">BOOK</button>
                 </div>
 
                 <!-- SUBSERVICE #2 -->
@@ -528,7 +528,7 @@
                         <p>3 hours</p>
                         <p>$325.00</p>
                     </div>
-                    <a href="#" class="book-btn">BOOK</a>
+                    <button class="book-btn" onclick="openBooking()">BOOK</button>
                 </div>
             </div>
         </div>
@@ -552,7 +552,7 @@
                         <p class="pink-message">This service is to give a longer effect to shorter locs.</p><br>
                         <p class="pink-message">You must have 100 locs or fewer to book this service</p>
                     </div>
-                    <a href="#" class="book-btn">BOOK</a>
+                    <button class="book-btn" onclick="openBooking()">BOOK</button>
                 </div>
             </div>
         </div>
@@ -985,6 +985,31 @@
 </section>
 
 
+<h1>Starter Locs</h1>
+<p>Test booking modal</p>
+
+<button class="book-btn2" onclick="openBooking()">Book Now</button>
+
+<div id="bookingModal" class="modal">
+  <div class="modal-wrapper">
+
+    <!-- MODAL BOX -->
+    <div class="modal-content">
+      <div class="iframe-container">
+        <iframe
+          src="https://app.acuityscheduling.com/schedule.php?owner=37942412&appointmentType=87353882&ref=embedded_csp"
+          allow="payment">
+        </iframe>
+      </div>
+    </div>
+
+    <!-- EXIT BUTTON (OUTSIDE MODAL) -->
+    <button class="exit-btn" onclick="closeBooking()">EXIT BOOKING</button>
+
+  </div>
+</div>
+
+<script src="https://embed.acuityscheduling.com/js/embed.js"></script>
 
 
 

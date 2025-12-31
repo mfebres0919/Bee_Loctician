@@ -194,3 +194,15 @@ document.querySelectorAll('.service-header').forEach(header => {
     }
   });
 });
+
+
+// MODAL TEST
+function openBooking() {
+  document.getElementById("bookingModal").style.display = "block";
+  document.body.style.overflow = "hidden";
+}
+
+function closeBooking() {
+  document.getElementById("bookingModal").style.display = "none";
+  document.body.style.overflow = "";
+}

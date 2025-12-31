@@ -1363,6 +1363,7 @@ img {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-right: 1.2rem;
 
   padding: 1.2rem 0;
   border-bottom: 2px solid rgba(255, 69, 199, 0.25);
@@ -1396,11 +1397,12 @@ img {
   background: #222;
   color: #fff;
 
-  padding: 0.5rem 1.4rem;
+  padding: 1rem 1.4rem;
   font-size: 0.75rem;
   letter-spacing: 0.12em;
 
   border: 1px solid rgba(255, 69, 199, 0.6);
+  border-radius: .5rem;
   text-decoration: none;
 
   box-shadow:
@@ -1409,7 +1411,13 @@ img {
   transition:
     transform 0.25s ease,
     box-shadow 0.25s ease;
+
+
+  appearance: none;
+  -webkit-appearance: none;
+  line-height: 1;
 }
+
 
 .book-btn:hover {
   transform: translateY(-2px);
@@ -2469,4 +2477,120 @@ animation-duration: 7s;
 
 .my-work-section .reveal-container.active {
   transform: translateY(0);
+}
+
+
+
+
+/* MODAL TEST */
+.modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.7);
+  display: none;
+  z-index: 9999;
+}
+
+/* CENTERING + STACK */
+.modal-wrapper {
+  width: auto;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  gap: 16px; /* space between modal & exit button */
+}
+
+/* MODAL BOX */
+.modal-content {
+  background: #fff;
+  width: 100%;
+  max-width: 720px;
+  max-height: 80vh;
+  /* border-radius: 18px; */
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+/* SCROLL AREA */
+.iframe-container {
+  flex: 1;
+  border: .8px solid rgb(255, 0, 204);
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* IFRAME */
+.iframe-container iframe {
+  width: 100%;
+  min-height: 700px;
+  border: none;
+}
+
+/* EXIT BUTTON */
+.exit-btn {
+  background: rgb(197, 3, 35);
+  color: white;
+  border: 1px solid white;
+  padding: 12px 28px;
+  font-size: 16px;
+  border-radius: 999px;
+  cursor: pointer;
+  font-family: "Poppins", sans-serif;
+
+  /* Glow */
+  box-shadow:
+    0 0 8px rgba(197, 3, 35, 0.6),
+    0 0 18px rgba(197, 3, 35, 0.4);
+
+  /* Animation */
+  animation: exitPulse 2.5s ease-in-out infinite;
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    background 0.25s ease;
+}
+
+
+@keyframes exitPulse {
+  0% {
+    box-shadow:
+      0 0 6px rgba(197, 3, 35, 0.5),
+      0 0 14px rgba(197, 3, 35, 0.35);
+  }
+  50% {
+    box-shadow:
+      0 0 14px rgba(255, 30, 60, 0.9),
+      0 0 28px rgba(255, 30, 60, 0.6);
+  }
+  100% {
+    box-shadow:
+      0 0 6px rgba(197, 3, 35, 0.5),
+      0 0 14px rgba(197, 3, 35, 0.35);
+  }
+}
+
+
+.exit-btn:hover {
+  transform: translateY(-2px);
+  background: rgb(220, 10, 45);
+  box-shadow:
+    0 0 18px rgba(255, 40, 70, 1),
+    0 0 36px rgba(255, 40, 70, 0.7);
+}
+
+
+/* 📱 MOBILE */
+@media (max-width: 600px) {
+  .modal-content {
+    max-height: 75vh;
+  }
+
+  .iframe-container iframe {
+    min-height: 900px;
+  }
 }
