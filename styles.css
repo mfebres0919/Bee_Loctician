@@ -793,9 +793,11 @@ img {
 
 .carousel-track {
   display: inline-block; /* Allows items to sit side-by-side */
-  animation: slide 25s linear infinite; /* Adjust duration and timing */
+  animation: slide 45s linear infinite; /* Adjust duration and timing */
   background-color: #ffc2f7;
   padding: 1.5rem;
+  transform: translateZ(0);
+  backface-visibility: hidden;
 
 }
 
