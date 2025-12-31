@@ -855,7 +855,7 @@ img {
   padding: 6rem;
   gap: 2rem;
   width: max-content;
-  animation: mywork-scroll 45s linear infinite;
+  animation: mywork-scroll 75s linear infinite;
 }
 
 .mywork-item {
