@@ -1365,7 +1365,7 @@ img {
   align-items: center;
 
   padding: 1.2rem 0;
-  border-bottom: 1px solid rgba(255, 69, 199, 0.25);
+  border-bottom: 2px solid rgba(255, 69, 199, 0.25);
 }
 
 .sub-service:last-child {
