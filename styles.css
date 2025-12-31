@@ -1355,7 +1355,6 @@ img {
 /* DESCRIPTION TEXT */
 .service-content p {
   max-width: 600px;
-  line-height: 1.6;
 }
 
 
@@ -1381,10 +1380,17 @@ img {
 }
 
 .sub-info p {
-  margin: 0.25rem 0 0;
   font-size: 0.9rem;
   color: #ccc;
+  padding: 0;
+  line-height: 2rem;
 }
+
+.sub-info > .pink-message {
+  color: var(--neon-pink);
+  font-weight: 600;
+}
+
 
 .book-btn {
   background: #222;
