@@ -57,17 +57,26 @@ items.forEach(item => {
   const content = item.querySelector('.service-content');
 
   header.addEventListener('click', () => {
-    // Close others
+    const isOpen = item.classList.contains('active');
+
+    // CLOSE OTHERS
     items.forEach(i => {
-      if (i !== item) {
+      if (i !== item && i.classList.contains('active')) {
+        const c = i.querySelector('.service-content');
+        c.style.height = c.scrollHeight + 'px';
+        requestAnimationFrame(() => {
+          c.style.height = '0px';
+        });
         i.classList.remove('active');
-        i.querySelector('.service-content').style.height = '0px';
       }
     });
 
-    // Toggle current
-    if (item.classList.contains('active')) {
-      content.style.height = '0px';
+    // TOGGLE CURRENT
+    if (isOpen) {
+      content.style.height = content.scrollHeight + 'px';
+      requestAnimationFrame(() => {
+        content.style.height = '0px';
+      });
       item.classList.remove('active');
     } else {
       item.classList.add('active');
@@ -75,6 +84,7 @@ items.forEach(item => {
     }
   });
 });
+
 
 
 
@@ -144,4 +154,43 @@ nextBtn.addEventListener('click', () => {
 prevBtn.addEventListener('click', () => {
   currentIndex = (currentIndex - 1 + images.length) % images.length;
   updateImage(currentIndex);
+});
+
+
+
+// SUB SERVICE INFO
+
+document.querySelectorAll('.service-header').forEach(header => {
+  header.addEventListener('click', () => {
+    const item = header.parentElement;
+    const content = item.querySelector('.service-content');
+
+    const isOpen = item.classList.contains('active');
+
+    // CLOSE ALL OTHER ITEMS
+    document.querySelectorAll('.service-item.active').forEach(openItem => {
+      if (openItem !== item) {
+        const openContent = openItem.querySelector('.service-content');
+        openContent.style.height = openContent.scrollHeight + 'px';
+        requestAnimationFrame(() => {
+          openContent.style.height = '0px';
+        });
+        openItem.classList.remove('active');
+      }
+    });
+
+    // TOGGLE CURRENT ITEM
+    if (!isOpen) {
+      // OPEN
+      content.style.height = content.scrollHeight + 'px';
+      item.classList.add('active');
+    } else {
+      // CLOSE
+      content.style.height = content.scrollHeight + 'px';
+      requestAnimationFrame(() => {
+        content.style.height = '0px';
+      });
+      item.classList.remove('active');
+    }
+  });
 });

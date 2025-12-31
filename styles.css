@@ -1224,7 +1224,7 @@ img {
 
 
 /* ========================= 
-=======CATEGORY SECTION=====*/
+=======SERVICES SECTION=====*/
 :root {
   --neon-pink: #ff45c7;
 }
@@ -1356,6 +1356,60 @@ img {
 .service-content p {
   max-width: 600px;
   line-height: 1.6;
+}
+
+
+/* SUBSERVICE CSS */
+.sub-service {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 1.2rem 0;
+  border-bottom: 1px solid rgba(255, 69, 199, 0.25);
+}
+
+.sub-service:last-child {
+  border-bottom: none;
+}
+
+.sub-info h4 {
+  margin: 0;
+  font-size: 1.05rem;
+  color: #fff;
+  font-weight: 600;
+}
+
+.sub-info p {
+  margin: 0.25rem 0 0;
+  font-size: 0.9rem;
+  color: #ccc;
+}
+
+.book-btn {
+  background: #222;
+  color: #fff;
+
+  padding: 0.5rem 1.4rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
+
+  border: 1px solid rgba(255, 69, 199, 0.6);
+  text-decoration: none;
+
+  box-shadow:
+    0 0 10px rgba(255, 69, 199, 0.45);
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.book-btn:hover {
+  transform: translateY(-2px);
+  box-shadow:
+    0 0 16px rgba(255, 69, 199, 0.75),
+    0 0 30px rgba(255, 69, 199, 0.5);
 }
 
 
