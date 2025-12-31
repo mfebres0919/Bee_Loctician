@@ -856,6 +856,8 @@ img {
   gap: 2rem;
   width: max-content;
   animation: mywork-scroll 75s linear infinite;
+  transform: translateZ(0);
+  backface-visibility: hidden;
 }
 
 .mywork-item {
@@ -887,10 +889,6 @@ img {
 .mywork-item:nth-child(15) { animation-delay: 5.6s; }
 .mywork-item:nth-child(16) { animation-delay: 6.0s; }
 
-
-.mywork-carousel:hover .mywork-track {
-  animation-play-state: paused;
-}
 
 
 /* Smooth horizontal loop */
@@ -927,6 +925,13 @@ img {
     width: 160px;
     height: 160px;
   }
+}
+
+@media (min-width: 1024px) {
+  .mywork-carousel:hover .mywork-track {
+  animation-play-state: paused;
+}
+
 }
 
 
