@@ -119,3 +119,45 @@ document.querySelectorAll('.messages-section').forEach(section => {
 document.querySelectorAll('.cta-2-section').forEach(section => {
   observer.observe(section);
 });
+
+
+
+
+
+
+
+
+const images = [
+  'images/client-imgs/client2.png',
+  'images/client-imgs/client3.png',
+  'images/client-imgs/client4.png',
+  'images/client-imgs/client5.png',
+  'images/client-imgs/client6.png',
+  'images/client-imgs/client7.png',
+  'images/client-imgs/client8.png',
+  'images/client-imgs/client9.png'
+];
+
+let currentIndex = 0;
+const img = document.getElementById('slideshowImage');
+const prevBtn = document.querySelector('.arrow-left');
+const nextBtn = document.querySelector('.arrow-right');
+
+function updateImage(index) {
+  img.style.opacity = 0;
+
+  setTimeout(() => {
+    img.src = images[index];
+    img.style.opacity = 1;
+  }, 150);
+}
+
+nextBtn.addEventListener('click', () => {
+  currentIndex = (currentIndex + 1) % images.length;
+  updateImage(currentIndex);
+});
+
+prevBtn.addEventListener('click', () => {
+  currentIndex = (currentIndex - 1 + images.length) % images.length;
+  updateImage(currentIndex);
+});

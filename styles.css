@@ -722,7 +722,7 @@ img {
 .btn-1:hover {
   animation-play-state: paused;
   transform: translateY(-2px);
-  
+
   box-shadow:
     0 0 25px rgba(255, 120, 200, 0.55),
     0 0 60px rgba(255, 90, 180, 0.4),
@@ -825,22 +825,139 @@ img {
 }
 
 
+
+/* ===============================
+   MY WORK — SLIDING CAROUSEL
+================================ */
+
+.my-work-section {
+  background: black;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+}
+
+
+.work-logo img {
+  width: clamp(350px, 15vw, 500px);
+  height: auto;
+  margin: 0 auto 0 auto;
+}
+/* Carousel viewport */
+.mywork-carousel {
+  width: 100%;
+  overflow: hidden;
+}
+
+/* Track */
+.mywork-track {
+  display: flex;
+  padding: 6rem;
+  gap: 2rem;
+  width: max-content;
+  animation: mywork-scroll 45s linear infinite;
+}
+
+.mywork-item {
+  width: 220px;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 500%;
+  flex-shrink: 0;
+
+  animation: myworkGlowPulse 3.6s ease-in-out infinite;
+  will-change: box-shadow;
+}
+
+
+.mywork-item:nth-child(1)  { animation-delay: 0s; }
+.mywork-item:nth-child(2)  { animation-delay: 0.4s; }
+.mywork-item:nth-child(3)  { animation-delay: 0.8s; }
+.mywork-item:nth-child(4)  { animation-delay: 1.2s; }
+.mywork-item:nth-child(5)  { animation-delay: 1.6s; }
+.mywork-item:nth-child(6)  { animation-delay: 2.0s; }
+.mywork-item:nth-child(7)  { animation-delay: 2.4s; }
+.mywork-item:nth-child(8)  { animation-delay: 2.8s; }
+.mywork-item:nth-child(9)  { animation-delay: 3.2s; }
+.mywork-item:nth-child(10) { animation-delay: 3.6s; }
+.mywork-item:nth-child(11) { animation-delay: 4.0s; }
+.mywork-item:nth-child(12) { animation-delay: 4.4s; }
+.mywork-item:nth-child(13) { animation-delay: 4.8s; }
+.mywork-item:nth-child(14) { animation-delay: 5.2s; }
+.mywork-item:nth-child(15) { animation-delay: 5.6s; }
+.mywork-item:nth-child(16) { animation-delay: 6.0s; }
+
+
+.mywork-carousel:hover .mywork-track {
+  animation-play-state: paused;
+}
+
+
+/* Smooth horizontal loop */
+@keyframes mywork-scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes myworkGlowPulse {
+  0%, 100% {
+    box-shadow:
+      0 0 0 3px rgba(255, 69, 199, 0.75),
+      0 0 25px rgba(255, 69, 199, 0.35),
+      0 0 70px rgba(255, 69, 199, 0.18);
+  }
+
+  50% {
+    box-shadow:
+      0 0 0 3px rgba(255, 69, 199, 1),
+      0 0 55px rgba(255, 69, 199, 0.85),
+      0 0 130px rgba(255, 69, 199, 0.55),
+      0 0 190px rgba(255, 69, 199, 0.30);
+  }
+}
+
+
+/* Mobile sizing */
+@media (max-width: 768px) {
+  .mywork-item {
+    width: 160px;
+    height: 160px;
+  }
+}
+
+
+
+
+
+
 /* ABOUT ME SECTION */
 
 .about-me-section {
-    display: flex;
-    flex-direction: column;
-    padding: 2rem;
-    padding-top: 6rem;
-    text-align: center;
-    gap: 5rem;
-    position: relative;
-    overflow: hidden;
+  margin-top: 4rem;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
 }
+
+.melody-2-img img {
+  width: clamp(300px, 20vw, 400px);
+  height: auto;
+  margin: 0 auto;
+}
+
 
 .about-paragraph {
     padding: 0;
-    max-width: 900px;
+    max-width: 600px;
 }
 
 .about-logo-2 {
@@ -851,23 +968,26 @@ img {
     padding: 2rem 0rem 2rem 0rem;
 }
 
-.about-logo img, .about-logo-2 img{
+.about-logo img, .about-logo-2 img {
   width: clamp(300px, 20vw, 400px);
-    height: auto;
+  height: auto;
   margin: 0 auto;
 }
 
 
-
 @media (min-width: 1024px) {
-  .about-me-section {
+
+  .about-content {
+    display: flex;
     flex-direction: row;
-    padding: 3rem;
+    gap: 4rem;
     justify-content: center;
-    /* border: 2px solid red; */
+    align-items: center;
+    text-align: center;
   }
 
   .about-paragraph {
+    text-align: center;
     align-self: center;
     max-width: 600px;
   }
@@ -939,6 +1059,10 @@ img {
     position: relative;
     z-index: 1;
 }
+
+
+
+
 
 
 /* ============================= */
@@ -1233,7 +1357,8 @@ img {
 /* ====BUSINESS HOURS===== */
 
 .hours-section {
-    /* background-image: url(./images/backgrounds/container2-background.svg); */
+    display: flex;
+    flex-direction: column;
     background-size: cover;
     text-align: center;
     position: relative;
@@ -1244,6 +1369,14 @@ img {
     position: relative;
     margin: 0 auto;
 }
+
+@media (min-width:1024px) {
+  .hours-section {
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+
 
 .container-2 {
     margin-top: 3rem;
