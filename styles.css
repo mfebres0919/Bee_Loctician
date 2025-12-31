@@ -2348,7 +2348,7 @@ animation-duration: 7s;
 }
 
 
-
+/* CTA-2 TRANSITION */
 /* Image first */
 .cta-2-section .reveal-img.active {
   transition-delay: 0.2s;
@@ -2382,3 +2382,23 @@ animation-duration: 7s;
 .cta-2-section .reveal-img.active {
   transform: translateY(0) scale(1);
 }
+
+
+
+/* Logo first */
+.my-work-section .reveal-logo.active {
+  transition-delay: 0.2s;
+}
+
+/* Carousel second */
+.my-work-section .reveal-container.active {
+  transition-delay: .5s;
+}
+
+/* Optional subtle lift (same idea as booking cards) */
+.my-work-section .reveal-container {
+  transform: translateY(5px);
+}
+
+.my-work-section .reveal-container.active {
+  transform: translateY(0);

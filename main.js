@@ -78,7 +78,7 @@ items.forEach(item => {
 
 
 
-
+// TRANSITIONS
 window.addEventListener('load', () => {
   document.querySelectorAll('.hero-section .reveal').forEach(el => {
     el.classList.add('active');
@@ -119,6 +119,10 @@ document.querySelectorAll('.messages-section').forEach(section => {
 document.querySelectorAll('.cta-2-section').forEach(section => {
   observer.observe(section);
 });
+document.querySelectorAll('.my-work-section').forEach(section => {
+  observer.observe(section);
+});
+
 
 
 
