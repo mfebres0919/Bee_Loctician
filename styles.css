@@ -1402,7 +1402,6 @@ img {
   letter-spacing: 0.12em;
 
   border: 1px solid rgba(255, 69, 199, 0.6);
-  border-radius: .5rem;
   text-decoration: none;
 
   box-shadow:
@@ -2518,7 +2517,7 @@ animation-duration: 7s;
 /* SCROLL AREA */
 .iframe-container {
   flex: 1;
-  border: .8px solid rgb(255, 0, 204);
+  border: .8    px solid rgb(255, 0, 204);
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
 }
