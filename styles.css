@@ -87,7 +87,7 @@ h1, h2, h3, h4, h5, h6 {
     padding: clamp(0.75rem, 2vw, 1.5rem);
     border-radius: 0;
 
-    position: relative;   /* ← NOT fixed anymore */
+    position: sticky;   /* ← NOT fixed anymore */
     top: 0;               /* remove floating */
     left: 0;
     transform: none;      /* remove centering snap */
@@ -429,7 +429,7 @@ h1, h2, h3, h4, h5, h6 {
 
     border-radius: 0;
 
-    position: relative; /* ← NOT fixed */
+    position: sticky; /* ← NOT fixed */
     top: 0;
     left: 0;
     transform: none;
